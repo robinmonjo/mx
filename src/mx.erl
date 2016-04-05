@@ -30,5 +30,6 @@ loop(Nb) ->
       io:format("~p finished~n", [Pid]),
       loop(Nb - 1);
     _ ->
-      io:format("Received an unknown message~n")
+      io:format("Received an unknown message~n"),
+      loop(Nb)
   end.
